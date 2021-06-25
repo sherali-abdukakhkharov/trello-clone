@@ -1,0 +1,16 @@
+<%- include('../includes/header.ejs') %>
+</head>
+
+<body>
+    <main>
+        <%- include('../includes/board.ejs') %>
+        <div class="add-list">
+            <form autocomplete="off" action="/add-list" method="POST">
+                <input type="text" name="listName">
+                <!-- <input type="hidden" name="userId" value="user.id"> -->
+                <button type="submit">Add another list</button>
+            </form>
+        </div>
+    </main>
+
+<%- include('../includes/footer.ejs') %>

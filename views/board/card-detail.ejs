@@ -1,0 +1,29 @@
+<%- include('../includes/header.ejs') %>
+</head>
+<form autocomplete="off" action="/delete-card" method="POST">
+    <input type="hidden" name="cardId" value="<%= card.id %>">
+    <button type="submit">Delete Card</button>
+</form>
+<form autocomplete="off" action="/edit-card" method="POST">
+<div class="card-detail-title">
+    <input type="text" name="cardTitle" value="<%= card.title %>">
+</div>
+<hr>
+<div class="card-detail-description-header">
+    <h3>Description</h3>
+</div>
+
+<div class="card-detail-description">
+        <textarea name="cardDesc" id="<%= card.id %>" cols="30" rows="10" placeholder="Add a more detailed description…"><%= card.description === null ? "" : card.description %></textarea>
+        <input type="hidden" name="cardId" value="<%= card.id %>">
+        <button type="submit">Save All Changes</button>
+</div>
+</form>
+
+<div class="actions">
+    <form autocomplete="off" action="/" method="GET">
+        <button type="submit">Exit</button>
+    </form>
+</div>
+
+<%- include('../includes/header.ejs') %>
