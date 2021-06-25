@@ -1,0 +1,86 @@
+main {
+  -webkit-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  margin-bottom: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.list-box {
+  display: inline-block !important;
+}
+
+.list {
+  display: inline-block !important;
+  background-color: #D2D7E5;
+  width: 300px;
+  padding: 20px;
+  cursor: move;
+}
+
+.list.over {
+  border: 3px dotted #666;
+}
+
+.card-box {
+  display: block;
+}
+
+.list-cards {
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgb(9 30 66 / 25%);
+  cursor: pointer;
+  display: block;
+  margin-bottom: 8px;
+  max-width: 300px;
+  min-height: 20px;
+  position: relative;
+  text-decoration: none;
+  z-index: 0;
+  /* cursor: move; */
+}
+
+.list-cards.over {
+  border: 3px dotted #666;
+}
+
+.list-card-title {
+  clear: both;
+  display: block;
+  margin: 0 0 4px;
+  overflow: hidden;
+  text-decoration: none;
+  word-wrap: break-word;
+  color: #172b4d;
+}
+
+.card-detail-title {
+  margin: 12px 40px 8px 56px;
+  min-height: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.add-list {
+  display: inline-block !important;
+}
+
+.header{ 
+  padding:10px; 
+  border:none; 
+  background:transparent; 
+}
+
+.delete {
+  position: absolute;
+  top: 4px;
+  z-index: 1;
+}

@@ -1,0 +1,38 @@
+<% for (let list of data.lists) { 
+    // if (list.userId === user.id) {%>
+<div class="list-box">
+    <div draggable="true" class="list">
+        <div class="list-content">
+            <div class="header">
+                <h2><%= list.title %></h2>
+            </div>
+        <div class="delete">
+            <form autocomplete="off" action="/delete-list/<%= list.id %>" method="POST">
+                <button type="submit">x</button>
+            </form>
+        </div>
+        <% for (let card of data.cards) { 
+            if (list.id === card.listId) { %>
+        <div class="card-box">
+            <div draggable="true" class="list-cards">
+                <span class="list-card-title">
+                <a href="/card-detail/<%= card.id %>"><%= card.title %></a>
+                </span>
+             </div>
+        </div>
+        <% }
+    } %>
+            <div class="card-action">
+                <form autocomplete="off" action="/add-card" method="POST">
+                    <input type="text" name="cardName">
+                    <input type="hidden" name="listId" value="<%= list.id %>">
+                    <button type="submit">Add another card</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <% }
+// } %>   
+</div>
+
+    
