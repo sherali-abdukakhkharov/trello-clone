@@ -46,20 +46,20 @@ function handleDrop(e) {
 function handleDragEnd(e) {
   this.style.opacity = '1';
   
-  cards.forEach(function (card) {
-    card.classList.remove('over');
+  cards.forEach(function (list) {
+    list.classList.remove('over');
   });
 }
 
 
-let cards = document.querySelectorAll('.card-box .list-cards');
-cards.forEach(function(card) {
-  card.addEventListener('dragstart', handleDragStart, false);
-  card.addEventListener('dragenter', handleDragEnter, false);
-  card.addEventListener('dragover', handleDragOver, false);
-  card.addEventListener('dragleave', handleDragLeave, false);
-  card.addEventListener('drop', handleDrop, false);
-  card.addEventListener('dragend', handleDragEnd, false);
+let lists = document.querySelectorAll('.list-box .list');
+lists.forEach(function(list) {
+  list.addEventListener('dragstart', handleDragStart, false);
+  list.addEventListener('dragenter', handleDragEnter, false);
+  list.addEventListener('dragover', handleDragOver, false);
+  list.addEventListener('dragleave', handleDragLeave, false);
+  list.addEventListener('drop', handleDrop, false);
+  list.addEventListener('dragend', handleDragEnd, false);
 });
 });
 </script>
